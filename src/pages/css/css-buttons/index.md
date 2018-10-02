@@ -97,10 +97,19 @@ To determine the speed of the hover effect use the property `transition-duration
 To disable a button, use the cursor property:
 
 ```
+### 
 button {
   cursor: not-allowed;
 }
 ```
+Or
+```
+ button :disabled {
+  color: grey;
+}
+```
+ 
+
 
 #### More Information:
 * https://www.w3schools.com/css/css3_buttons.asp
