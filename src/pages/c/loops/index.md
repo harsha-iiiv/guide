@@ -132,13 +132,67 @@ C supports the following control statements:
 
 #### 1. Break statement
 Terminates the <b>loop</b> or <b>switch</b> statement and transfers execution to the statement immediately following the loop or switch.
+Take a look here that how it works.
+```C
+#include<stdio.h>  
+int main()
+{  
+int i=1;   
+                      //starting a loop from 1 to 10    
+  for(i=1;i<=10;i++)
+      {      
+         printf("%d \n",i);    
+              if(i==5)
+              {  
+                  break;    
+              }    
+       }  
+return 0;  
+}    
+```
+This program will print upto 5 numbers on console.
 
 #### 2. Continue statement
 Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
+Take a look here that how it works.
+```C
+#include<stdio.h>  
+int main()
+{
+ for(int i=0;i<3;i++)
+{
+	if ( i==2 )
+	{
+	continue;
+	}
+printf(“%d”,i);
+}
+return 0;
+}
+```
+This program will print 0,1 but not 2.
 
 #### 3. Goto statement
 Transfers control to the labeled statement.
+Let's take a look
 
+```C
+#include<stdio.h>
+ void main()
+{
+ int i=1;
+ 
+    if(i==1)
+  goto one;
+     else if(i==2)
+           printf("2");
+     else
+           printf("Its nothing");
+ 
+       one:
+       printf("Avoid goto keyword");
+}
+```
 # Some Fun and Useful Quirks
 
 ## Infinite looping with for loops
